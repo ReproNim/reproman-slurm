@@ -11,3 +11,5 @@ services:
       - ./volumes/spool:/var/spool/slurmd
       - ./volumes/log:/var/log/slurm
       - ./volumes/db:/var/lib/mysql
+    ports:
+      - "42241:22"

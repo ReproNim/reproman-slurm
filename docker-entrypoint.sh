@@ -49,6 +49,10 @@ fi
 
 chown slurm:slurm /var/spool/slurmd /var/run/slurmd /var/lib/slurmd /var/log/slurm
 
+echo "- Starting sshd ..."
+ssh-keygen -A
+/usr/sbin/sshd
+
 echo "- Starting all Slurm processes under supervisord"
 /usr/bin/supervisord --configuration /etc/supervisord.conf
 
