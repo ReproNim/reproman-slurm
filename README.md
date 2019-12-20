@@ -1,5 +1,5 @@
 This image exists for testing [ReproMan's][rman] Slurm submitter.  All
-the hard work is done by the [docker-centos7-slurm][dlc] image.  This
+the hard work is done by the [docker-centos7-slurm][dcs] image.  This
 Dockerfile adds OpenSSH on top so that the container can be exposed as
 a ReproMan SSH resource.
 
