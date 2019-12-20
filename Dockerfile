@@ -1,6 +1,6 @@
 FROM giovtorres/docker-centos7-slurm
 
-LABEL org.opencontainers.image.source="https://github.com/repronim-services/reproman-slurm" \
+LABEL org.opencontainers.image.source="https://github.com/ReproNim/reproman-slurm" \
       org.opencontainers.image.title="reproman-slurm" \
       org.opencontainers.image.description="Slurm + sshd for ReproMan testing" \
       org.label-schema.docker.cmd="docker run -it -h ernie repronim/reproman-slurm:latest" \
