@@ -12,13 +12,18 @@ RUN set -x \
     && yum makecache fast \
     && yum -y update \
     && yum -y install \
+        hwloc \
+        nmap-ncat \
         openssh-clients \
         openssh-server \
     && yum clean all \
     && rm -rf /var/cache/yum
 
+RUN git clone https://github.com/TACC/launcher /launcher
+
 RUN echo 'root:root' | chpasswd
-RUN mkdir /root/.ssh
+RUN mkdir /root/.ssh && echo "LAUNCHER_DIR=/launcher" >/root/.ssh/environment && \
+   echo "PermitUserEnvironment yes" >>/etc/ssh/sshd_config
 
 EXPOSE 22/tcp
 
